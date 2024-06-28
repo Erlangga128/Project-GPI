@@ -1,0 +1,400 @@
+:root {
+  --primary: #fc8a08;
+  --bg: #010101;
+}
+
+* {
+  margin: 0;
+  padding: 0;
+  box-sizing: border-box;
+  outline: none;
+  border: none;
+  text-decoration: none;
+}
+
+html {
+  scroll-behavior: smooth;
+  scroll-snap-type: x-mandatory;
+}
+
+
+body {
+  font-family: 'Poppins', sans-serif;
+  background-image: url('../img/bg2.jpeg');
+  background-size: cover;
+  color: #fff
+  position: relative;
+  min-height: 100vh;
+}
+
+/* Navbar */
+
+
+
+/* Hero Section */
+.hero {
+  min-height: 100vh;
+  display: flex;
+  align-items: center;
+  background-image: url('../img/gas/walpaper.jpg');
+  background-repeat: no-repeat;
+  background-size: cover;
+  background-position: center;
+  position: relative;
+  -webkit-mask-image: linear-gradient(rgba(0, 0, 0, 1) 90%, rgba(0, 0, 0, 0));
+  mask-image: linear-gradient(rgba(0, 0, 0,1) 95%, rgba(0, 0, 0, 0));
+}
+
+ .hero::after {
+  content: '';
+  display: block;
+  position: absolute;
+  width: 100%;
+  height: 10%;
+  bottom: 0;
+  background: linear-gradient(0deg, rgba(1, 1, 3, 1) 8%, rgba(255, 255, 255, 0) 25%);
+} */
+
+.hero .mask-container {
+  position: absolute;
+  /* background: salmon; */
+  inset: 0;
+  -webkit-mask-image: url('../img/header-bg.svg');
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-size: cover;
+  -webkit-mask-position: center;
+}
+
+.hero .content {
+  padding: 1.6rem 7%;
+  /* max-width: 60rem; */
+  width: 100%;
+  text-align: center;
+  position: fixed;
+  top:180px;
+}
+
+.hero .content h1 {
+  font-size: 4em;
+  margin-bottom: 20px;
+  color: #fff;
+  text-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+  line-height: 1.2;
+  text-align: center;
+}
+
+.hero .content h1 span {
+  color:#fff;
+}
+
+.hero .content p {
+  justify-content: center;
+  color: #fff;
+  margin-top: 1.4rem;
+  font-size: 2rem;
+  line-height: 1.4;
+  font-weight: 500;
+  text-shadow: 1px 1px 3px rgba(1,1,3,0.5);
+  mix-blend-mode: difference;
+  
+}
+
+.hero .content .cta {
+  margin-top: 1rem;
+  display: inline-block;
+  padding: 1rem 3rem;
+  font-size: 1.4rem;
+  color: #fff;
+  background-color: var(--primary);
+  border-radius: 0.5rem;
+  box-shadow: 1px 1px 3px rgba(1, 1, 3, 0.5);
+}
+
+/* About Section */
+.about,
+.menu,
+.products,
+.transportasi,
+.contact {
+  padding: 9rem 7% 1.4rem;
+}
+
+.about h2,
+.menu h2,
+.products h2,
+.transportasi h2,
+.contact h2 {
+  text-align: center;
+  font-size: 2.6rem;
+  margin-bottom: 3rem;
+}
+
+.about h2 span,
+.menu h2 span,
+.products h2 span,
+.transportasi h2 span,
+.contact h2 span {
+  color: #ffa500;
+}
+.transportasi p {
+  padding-bottom: 1.4rem;
+}
+
+.about .row {
+  display: flex;
+}
+
+.about .row .about-img {
+  flex: 1 1 45rem;
+}
+.about .content span {
+  color:crimson;
+}
+
+.about .row .about-img img {
+  margin-bottom: 1rem;
+  width: 70%;
+  height: auto;
+  -webkit-mask-image: url('../img/gas/Dozer.png');
+  -webkit-mask-size: 100%;
+  -webkit-mask-repeat: no-repeat;
+  -webkit-mask-position: center;
+}
+
+.about .row .content {
+  flex: 1 1 30rem;
+  padding: 0 1rem;
+}
+
+.about .row .content h3 {
+  font-size: 1.8rem;
+  margin-bottom: 1rem;
+}
+
+.about .row .content p {
+  margin-bottom: 0,8rem;
+  font-size: 1.4rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+
+
+/* Menu Section */
+.menu h2,
+.products h2,
+.transportasi h2,
+.contact h2 {
+  margin-bottom: 1rem;
+}
+.menu p,
+.products p,
+.transportasi p,
+.contact p {
+  text-align: center;
+  max-width: 30rem;
+  margin: auto;
+  font-size:1.3rem;
+  font-weight: 500;
+  line-height: 1.6;
+}
+
+.menu .row {
+  display: flex;
+  flex-wrap:wrap;
+  margin-top: 5rem;
+  justify-content: center;
+}
+
+.menu .row .menu-card {
+  text-align: center;
+  padding-bottom: 4rem;
+}
+
+.menu .row .menu-card img {
+  border-radius:20%;
+  width: 55%;
+  height: auto;
+}
+
+.menu .row .menu-card .menu-card-title {
+  margin: 1rem auto 0.5rem;
+}
+
+.memu .row .menu-card .menu-card-title .btn-group {
+  text-align: center;
+  display:flex;
+}
+/* Products Section */
+.products .row {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(30rem, 1fr));
+  gap: 1.5rem;
+  margin-top: 4rem;
+}
+
+.products .product-card {
+  text-align: center;
+  border: 1px solid #666;
+  padding: 2rem;
+}
+
+.products .product-icons {
+  display: flex;
+  justify-content: center;
+  gap: 0.5rem;
+}
+
+.products .product-icons a {
+  width: 4rem;
+  height: 4rem;
+  color: #fff;
+  margin: 0.3rem;
+  border: 1px solid #666;
+  border-radius: 50%;
+  display: flex;
+  justify-content: center;
+  align-items: center;
+}
+
+.products .product-icons a:hover {
+  background-color: var(--primary);
+  border: 1px solid var(--primary);
+}
+
+.products .product-image {
+  padding: 1rem 0;
+}
+
+.products .product-image img {
+  height: 20rem;
+}
+
+.products .product-content h3 {
+  font-size: 2rem;
+}
+
+
+/* Contact Section */
+.contact .row {
+  display: flex;
+  margin-top: 2rem;
+  background-color: #222;
+}
+
+.contact .row .map {
+  flex: 1 1 45rem;
+  width: 100%;
+  object-fit: cover;
+}
+
+
+
+
+/* Footer */
+footer {
+  background-color:#292929;
+  text-align: center;
+  padding: 1rem 0 3rem;
+  margin-top: 3rem;
+}
+
+footer .socials {
+  padding: 1rem 0;
+}
+
+footer .socials a {
+  color: #fff;
+  margin: 1rem;
+}
+
+footer .socials a:hover,
+footer .links a:hover {
+  color: crimson
+}
+
+
+footer .links {
+  margin-bottom: 1.4rem;
+}
+
+footer .links a {
+  color: #fff;
+  padding: 0.7rem 1rem;
+}
+
+footer .credit {
+  font-size: 0.8rem;
+}
+
+footer .credit a {
+  color:#fff;
+  font-weight: 700;
+  text-decoration: none;
+}
+
+
+/* Media Queries */
+/* Laptop */
+@media (max-width: 1366px) {
+  html {
+    font-size: 80%;
+  }
+  .about .row .about-img img {
+    webkit-mask-position:relative;
+  }
+}
+
+/* Tablet */
+@media (max-width: 768px) {
+  html {
+    font-size: 62.5%;
+  }
+  }
+  
+  /* Mobile Phone */
+@media (max-width: 450px) {
+  html {
+    font-size: 55%;
+  }
+}
+
+
+  .menu p {
+    font-size: 1.4rem;
+  }
+
+  .contact .row {
+    flex-wrap: wrap;
+  }
+
+  .contact .row .map {
+    height: 30rem;
+  }
+
+  .contact .row form {
+    padding-top: 0;
+  }
+
+  .modal-content {
+    flex-wrap: wrap;
+  }
+}
+
+#saploder {
+  display: flex;
+  padding: 20px;
+  align-items:center;
+  justify-content: center;
+  color: #ffa500;
+}
+
+.span-logo {
+  color: crimson;
+}
+
+
+.container-fluid .btn-group {
+  justify-content: center;
+  font-size: 20px;
+}
